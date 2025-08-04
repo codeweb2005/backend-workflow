@@ -31,7 +31,7 @@ jobs:
 
       - name: Deploy to EKS
         run: |
-          kubectl apply -R -f https://github.com/codeweb2005/new-backend/tree/454c7ba6d2189d8efb3b393aeae710a51fe6053e/backend/  # Đảm bảo các manifest Kubernetes của bạn nằm trong thư mục k8s/
+          kubectl apply -R -f backend/  # Đảm bảo các manifest Kubernetes của bạn nằm trong thư mục k8s/
           
       - name: Verify deployment
         run: |
