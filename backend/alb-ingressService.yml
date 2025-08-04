@@ -59,10 +59,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-<<<<<<< HEAD
                 name: order-service
-=======
-                name: order-servicee
->>>>>>> d67af28 (new)
                 port: 
                   number: 80                 
