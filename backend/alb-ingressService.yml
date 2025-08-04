@@ -34,7 +34,7 @@ spec:
               service:
                 name: auth-service
                 port: 
-                  number: 80
+                  number: 3000
     - http:
         paths:                  
           - path: /api/food
@@ -43,7 +43,7 @@ spec:
               service:
                 name: food-service
                 port: 
-                  number: 80
+                  number: 3000
     - http:
         paths:                  
           - path: /api/cart
@@ -52,7 +52,7 @@ spec:
               service:
                 name: cart-service
                 port: 
-                  number: 80
+                  number: 3000
     - http:
         paths:                  
           - path: /api/order
@@ -61,4 +61,4 @@ spec:
               service:
                 name: order-service
                 port: 
-                  number: 80                 
+                  number: 3000                 
