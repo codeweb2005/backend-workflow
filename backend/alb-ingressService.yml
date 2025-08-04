@@ -1,0 +1,68 @@
+# ----------- Ingress -----------
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-demo
+  annotations:
+    alb.ingress.kubernetes.io/load-balancer-name: alb-demo
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/healthcheck-protocol: HTTP 
+    alb.ingress.kubernetes.io/healthcheck-port: traffic-port
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: '15'
+    alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '5'
+    alb.ingress.kubernetes.io/success-codes: '200'
+    alb.ingress.kubernetes.io/healthy-threshold-count: '2'
+    alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'   
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:050752643680:certificate/f346d916-ee08-4140-84ad-5381e025e036
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
+    external-dns.alpha.kubernetes.io/hostname: eksdevops1.daohaithuan.click, eksdevops2.daohaithuan.click
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/healthcheck-path: /health  # Thêm dòng này để cấu hình health check
+  
+spec:
+  ingressClassName: alb   # Ingress Class                  
+  tls:
+  - hosts:
+    - "*.daohaithuan.click"
+  rules:
+    - http:
+        paths:                  
+          - path: /api/user
+            pathType: Prefix
+            backend:
+              service:
+                name: auth-service
+                port: 
+                  number: 80
+    - http:
+        paths:                  
+          - path: /api/food
+            pathType: Prefix
+            backend:
+              service:
+                name: food-service
+                port: 
+                  number: 80
+    - http:
+        paths:                  
+          - path: /api/cart
+            pathType: Prefix
+            backend:
+              service:
+                name: cart-service
+                port: 
+                  number: 80
+    - http:
+        paths:                  
+          - path: /api/order
+            pathType: Prefix
+            backend:
+              service:
+<<<<<<< HEAD
+                name: order-service
+=======
+                name: order-servicee
+>>>>>>> d67af28 (new)
+                port: 
+                  number: 80                 

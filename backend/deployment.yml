@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      containers:
+      - name: auth-service
+        image: 050752643680.dkr.ecr.us-east-1.amazonaws.com/user
+        ports:
+        - containerPort: 4001
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: food-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: food-service
+  template:
+    metadata:
+      labels:
+        app: food-service
+    spec:
+      containers:
+      - name: food-service
+        image: 050752643680.dkr.ecr.us-east-1.amazonaws.com/food
+        ports:
+        - containerPort: 4002
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cart-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cart-service
+  template:
+    metadata:
+      labels:
+        app: cart-service
+    spec:
+      containers:
+      - name: cart-service
+        image: 050752643680.dkr.ecr.us-east-1.amazonaws.com/cart
+        ports:
+        - containerPort: 4004
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+      - name: order-service
+        image: 050752643680.dkr.ecr.us-east-1.amazonaws.com/order
+        ports:
+        - containerPort: 4003
