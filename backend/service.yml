@@ -7,7 +7,7 @@ spec:
     app: auth-service
   ports:
     - protocol: TCP
-      port: 3000
+      port: 3002
       targetPort: 4001
   type: ClusterIP
 ---
@@ -20,7 +20,7 @@ spec:
     app: food-service
   ports:
     - protocol: TCP
-      port: 3000
+      port: 3002
       targetPort: 4002
   type: ClusterIP
 ---
@@ -33,7 +33,7 @@ spec:
     app: cart-service
   ports:
     - protocol: TCP
-      port: 3000
+      port: 3002
       targetPort: 4004
   type: ClusterIP
 ---
@@ -46,6 +46,6 @@ spec:
     app: order-service
   ports:
     - protocol: TCP
-      port: 3000
+      port: 3002
       targetPort: 4003
   type: ClusterIP
