@@ -32,25 +32,25 @@ spec:
               service:
                 name: auth-service
                 port:
-                  number: 4001
+                  number: 3001
           - path: /api/food
             pathType: Prefix
             backend:
               service:
                 name: food-service
                 port:
-                  number: 4002
+                  number: 3001
           - path: /api/cart
             pathType: Prefix
             backend:
               service:
                 name: cart-service
                 port:
-                  number: 4004
+                  number: 3001
           - path: /api/order
             pathType: Prefix
             backend:
               service:
                 name: order-service
                 port:
-                  number: 4003
+                  number: 3001
