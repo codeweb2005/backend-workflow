@@ -1,0 +1,5 @@
+Port
+auth-service 4001
+food-service 4002
+order-service 4003
+cart-service 4004
