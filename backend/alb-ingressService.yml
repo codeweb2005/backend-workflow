@@ -32,7 +32,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: auth-service
+                name: auth-service-lb
                 port: 
                   number: 4001
     - http:
@@ -41,7 +41,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: food-service
+                name: food-service-lb
                 port: 
                   number: 4002
     - http:
@@ -50,7 +50,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: cart-service
+                name: cart-service-lb
                 port: 
                   number: 4004
     - http:
@@ -59,6 +59,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: order-service
+                name: order-service-lb
                 port: 
                   number: 4003                 
