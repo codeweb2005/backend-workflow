@@ -6,3 +6,6 @@ We need to navigate to the service folder inside the backend directory and uploa
 
 <img width="298" height="170" alt="image" src="https://github.com/user-attachments/assets/de7ae018-c6b3-4273-9a09-1678865fc910" />
 
+<h2>Then, go to the files above and replace the existing image link with your own.</h2>
+
+<img width="631" height="526" alt="image" src="https://github.com/user-attachments/assets/745521a2-46e1-401e-be9a-03abc8d5b73a" />
