@@ -9,3 +9,13 @@ We need to navigate to the service folder inside the backend directory and uploa
 <h2>Then, go to the files above and replace the existing image link with your own.</h2>
 
 <img width="631" height="526" alt="image" src="https://github.com/user-attachments/assets/745521a2-46e1-401e-be9a-03abc8d5b73a" />
+
+<h2>The most important point is to update the secrets so that they match your environment.</h2>
+
+<img width="882" height="332" alt="image" src="https://github.com/user-attachments/assets/925a223a-62a9-40f3-a80b-aea06e8419f5" />
+
+<h2>Simply run git push; this will trigger the GitHub Actions workflow and deploy the Manifest.</h2>
+
+<img width="1862" height="862" alt="image" src="https://github.com/user-attachments/assets/b2152807-14d1-4299-b112-c50d82866bfc" />
+
+
